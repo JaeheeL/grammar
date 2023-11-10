@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="4.css">
+</head>
+<body>
+	<!-- 
+		디스플레이 : inline, block
+		인라인 태그 : <span>, <a>, <abbr>, <acronym>, <b>, <bdo>, <big>, <br/>, <button>, <cite>, <code>, <dfn>, <em>, <i>, <img>, <input>, <kbd>, <label>, <map>, <object>, <q>, <samp>, <small>, <script>, <select>, <span>, <strong>, <sub>, <sup>, <textarea>, <tt>, <var>
+		블럭 태그 : <div>, <address>, <article>, <aside>, <audio>, <blockquote>, <canvas>, <dd>, <div>, <dl>, <fieldset>, <figcaption>, <figure>, <footer>, <form>, <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <header>, <hgroup>, <hr>, <noscript>, <ol>, <output>, <p>, <pre>, <section>, <table>, <ul>, <video>
+	-->
+
+	<!-- 인라인태그, 좌에서 우로 이동한다! -->
+	<span class="d-block">span</span>
+	<span class="d-block">span</span>
+	<span class="d-block">span</span>
+	<span class="d-block">span</span>
+	<a class="d-block" class="link" href="https://google.com">구글구글</a>
+	<a class="d-block" class="link" href="https://google.com">구글구글</a>
+	<a class="d-block" class="link" href="https://google.com">구글구글</a>
+	<a class="d-block" class="link" href="https://google.com">구글구글</a>
+	
+	<!-- 블럭태그, 상에서 하로 이동한다! -->
+	<div class="d-inline">div</div>
+	<div class="d-inline">div</div>
+	<div class="d-inline">div</div>
+	<div class="d-inline">div</div>
+	<h3 class="d-inline">h3</h3>
+	<h3 class="d-inline">h3</h3>
+	<h3 class="d-inline">h3</h3>
+	<h3 class="d-inline">h3</h3>
+
+	<!-- 인라인-블럭 디스플레이 : 인라인과 같으나, width, height, padding등 다양한 설정이 가능한 것 -->
+	<div class="d-inline-block">div</div>
+	<div class="d-inline-block">div</div>
+	<div class="d-inline-block">div</div>
+	<div class="d-inline-block">div</div>
+
+	<!-- none 디스플레이 : 보여주지 않음 -->
+	<div class="d-none">d-none</div>
+	<div class="d-none">d-none</div>
+	<div class="d-none">d-none</div>
+	<div class="d-none">d-none</div>
+
+	<!-- 플렉스 디스플레이 : 반응형-1 -->
+	<!-- <div class="d-flex">
+		<div class="first">장남-3</div>
+		<div class="second">차남-2</div>
+		<div class="third">삼남-1</div>
+	</div> -->
+	
+	<!-- 플렉스 디스플레이 : 반응형-2 -->
+	<div class="d-flex">
+		<div class="col-6">col-6</div>
+		<div class="col-6">col-6</div>
+	</div>
+
+	<div class="d-flex">
+		<div class="col-3">col-3</div>
+		<div class="col-3">col-3</div>
+		<div class="col-3">col-3</div>
+		<div class="col-3">col-3</div>
+	</div>
+
+	<div class="d-flex">
+		<div class="col-6">col-6</div>
+		<div class="col-3">col-3</div>
+		<div class="col-3">col-3</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- <link rel="stylesheet" href="7.css"> -->
+	<style>
+		/* 선택자 옵션 */
+		* {
+			text-decoration: none;
+		}
+
+		/* 직계자손 선택자 (direct descendent selector) */
+		li > a {
+			border: 1px solid red;
+		}
+
+		/* 자손 선택자 (descendent selector) */
+		li a {
+			color: red;
+		}
+
+		/* 인접 선택자 (adjacent selector) li에 인접한 p태그만 적용됌 */
+		li + p {
+			color: blue;
+		}
+
+		/* 형제 선택자 (sibling selector) li의 동일선상에 있는 p태그 전부 */
+		li~p {
+			color: aqua;
+		}
+
+		/* 속성 선택자 (attribute selector) a태그 안에 title이라는 속성이 존재했을때 적용 */
+		a[title] {
+			font-size: 30px;
+		}
+
+		a[title="네이버"] {
+			color: yellow;
+		}
+		/* 
+			속성 선택자 옵션
+			* 이것이 포함되어 있다
+			^ 이것으로 시작한다
+			$ 이것으로 끝난다
+			~ 띄어쓰기한 상태에서 정확히 그 단어가 있는지 찾아냄
+		*/
+
+		a[title*="ve"] {
+			color: blueviolet;
+		}
+
+		a[title^="a"] {
+			color: yellowgreen;
+		}
+
+		a[title$="e"] {
+			color: cadetblue;
+		}
+
+		img[src$=".png"] {
+			width: 150px;
+		}
+
+		/* 커스텀 속성 선택자 (custom attributes selector) */
+		img[data-info~="external"] {
+			height: 300px;
+		}
+
+		img[data-info~="img"] {
+			height: 50px;
+		}
+
+		img[data-info~="pet"] {
+			height: 300px;
+		}
+		
+	</style>
+</head>
+<body>
+	<li><a href="https://naver.com">네이바</a></li>
+	<li><span><a title="" href="https://naver.com">네이버</a></span></li>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tempore officiis quasi perspiciatis pariatur, maiores possimus doloremque aperiam libero. Praesentium molestiae provident recusandae soluta eaque accusamus officiis odit sit porro?</p>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tempore officiis quasi perspiciatis pariatur, maiores possimus doloremque aperiam libero. Praesentium molestiae provident recusandae soluta eaque accusamus officiis odit sit porro?</p>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est tempore officiis quasi perspiciatis pariatur, maiores possimus doloremque aperiam libero. Praesentium molestiae provident recusandae soluta eaque accusamus officiis odit sit porro?</p>
+	<li><span><a title="네이버" href="https://naver.com">네이버</a></span></li>
+	<li><span><a title="" href="https://naver.com">네이버</a></span></li>
+	<li><span><a title="google" href="https://google.com">구글</a></span></li>
+	<li><span><a title="amazon" href="https://amazon.com">아마존</a></span></li>
+	<hr>
+	<img src="dog.png" alt="">
+
+	<img src="dog.png" alt="" data-info="img pet external" >
+	<img src="dog.png" alt="" data-info="img" >
+	<img src="dog.png" alt="" data-info="external" >
+	<img src="dog.png" alt="" data-info="img pet external" >
+</body>
+</html>

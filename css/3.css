@@ -1,0 +1,62 @@
+div {
+	font-size: 25px;
+	/* font-weight: bold; */
+}
+
+/* class= .클래스명, id=#아이디명 	*/
+/* 선택자의 위계 누가 위인가? tag = 태그명 > class = .클래스명 > id = #아이디명 */
+.green {
+	color: green;
+}
+
+.blue {
+	color: blue;
+}
+
+.yellow {
+	color: yellow;
+}
+
+.big {
+	font-size: 50px;
+}
+
+#big {
+	font-size: 100px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.bolder {
+	font-weight: bolder;
+}
+
+.lighter {
+	font-weight: lighter;
+}
+
+.lucida {
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.img1 {
+	height: 200px;
+	width: auto;
+	/* display: block; */
+	/* display: inline; */
+	display: none;
+	/* padding : 개체의 크기가 늘어난다 과 margin의 차이점 */
+	padding: 10px;
+	padding-left: 50px;
+	padding-bottom: 10px;
+	margin-left: 30px;
+}
+
+.textcenter {
+	/* text-align: center;
+	text-align: left; */
+	text-align: right;
+	
+}

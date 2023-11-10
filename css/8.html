@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style>
+		/* 가상클래스(:class-name):별도의 클래스를 지정하지 않고도 마치 클래스를 지정한것 처럼 선택가능한 가상 클래스, 클래스를 추가하지 않아도 된다 */
+
+
+		/* 이벤트에(사용자의 행동에) 따른 가상클래스 */
+		a:link {
+			color: black;
+		}
+		
+		a:visited {
+			/* 사용자가 방문했을때 */
+			color: hotpink;
+		}
+		
+		a:hover {
+			/* 마우스를 갖다댔을때 */
+			color: red;
+		}
+
+		a:active {
+			/* 누르고 마우스를 안땠을때 */
+			color: coral;
+		}
+
+		input:focus {
+			/* active 상태에서 키보드를 갖다댔을때 */
+			color: lightseagreen;
+		}
+		
+		/* 순서에 따른 가상클래스 */
+		ol li {
+			color: cyan;
+		}
+
+		ol li:first-child {
+			/* 첫번째 자식에게 만 적용 */	
+			color: brown;
+		}
+
+		ol li:last-child {
+			/* 마지막 자식에게 만 적용 */	
+			color: darkkhaki;
+		}
+
+		ol li:nth-child(3) {
+			/* nth 3번째 자식을 파라미터로 지정해서 적용 */
+			color: deeppink;
+		}
+
+		ol li:nth-last-child(2) {
+			/* 뒤에서 2번째 자슥을 파라미터로 지정해서 적용 */
+			color: tomato;
+		}
+
+		/* 부정(negation) 가상클래스 */
+		/* div클래스가 container를 제외한 나머지클래스의 색깔변경 */
+		div:not(.container) {
+			color: rgb(64, 112, 154);
+		}
+
+	</style>
+</head>
+<body>
+	<a href="https://google.com">구글</a>
+	<input type="text">
+	<ol>
+		<li>1번째 자식</li>
+		<li>2번째 자식</li>
+		<li>3번째 자식</li>
+		<li>4번째 자식</li>
+		<li>5번째 자식</li>
+	</ol>
+	
+	<div class="container">
+		<h1>컨테이너 클래스</h1>
+		<div class="row">
+			<h1>로우 클래스</h1>
+			<h1>로우 클래스</h1>
+			<h1>로우 클래스</h1>
+			<h1>로우 클래스</h1>
+		</div>
+	</div>
+</body>
+</html>

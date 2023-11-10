@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/* 가상요소(::, element-name, 선택자 내 특정요소를 선택하는것), 브라우저 기준으로 적용된다. */
+		p::first-letter {
+			/* 첫번째 글자에만 적용 */
+			color: red;
+			font-size: xx-large;
+		}
+
+		p::first-line {
+			/* 첫번째 줄에만 적용 */
+			color: blue;
+		}
+
+		p::selection {
+			/* 선택한 부분에만 적용 */
+			color: aliceblue;
+			background-color: chartreuse;
+		}
+
+		input::placeholder {
+			color: green;
+		}
+
+
+		h1::before {
+			/* h1태그의 앞에 오는 것들 */
+			color: aquamarine;
+			content: "hello";
+		}
+
+		h1::after {
+			/* h1태그의 뒤에 오는 것들 */
+			color: greenyellow;
+			content: " 🏀 농구!!";
+		}
+</style>
+</head>
+<body>
+	<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur magni iure eaque, non blanditiis earum animi! Sed praesentium commodi id ipsa repudiandae doloremque, esse adipisci omnis perferendis quasi, recusandae eligendi.</p>
+	<input type="text" placeholder="ID를 입력하시오.">
+	<h1>CSS</h1>
+</body>
+</html>

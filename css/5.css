@@ -1,0 +1,32 @@
+.static {
+	/* 현재의 위치를 기준으로 움직인다, offset속성을 사용할 수 없다. */
+	/* position을 지정하지 않았을때 기본값 */
+	position: static;
+	background-color: red;
+}
+
+.relative {
+	/* 현재의 위치를 기준으로 움직인다. offset을 사용할 수 있다. */
+	position: relative;
+	background-color: blue;
+	/* offset	속성(top, bottom, left, right)*/
+	top: 50px;
+	left: 50px;
+
+}
+
+.absolute {
+	/* 현재 위치가 아니라 html 문서를 기준으로 고정됌. offset을 사용할 수 있다 */
+	position: absolute;
+	background-color: greenyellow;
+	top: 0px;
+	right: 0px;
+}
+
+.fixed {
+	/* 브라우저를 기준으로 고정됌. offset을 사용할 수 있다 */
+	position: fixed;
+	background-color: pink;
+	top: 0px;
+	left: 0px;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="6.css">
+</head>
+
+<body>
+		<!-- 선택자의 위계 tag < class < id (유니크 한 것이 먼저 적용됌) -->
+		<a id="a" class="a" href="https://naver.com">네이버</a>
+
+		<!-- 클래스간 위계를 만드는 방법 : .father > .son (자식이 더 먼저 적용됌) -->
+		<div class="son">son2</div>
+		<div class="father">
+			<div class="son">son</div>
+		</div>
+		
+		<div>
+			<span>자식</span>
+		</div>
+		<span>내놓은 자식</span>
+</body>
+</html>

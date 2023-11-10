@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/* 
+			미디어 쿼리(Media query), Css에서 조건을 붙여서 스타일을 적용하고 싶을때 사용
+			@Media (조건) {스타일}
+		*/
+
+		@media (max-width: 800px) {
+			/* 윈도우 브라우저가 최대 800픽셀 이하일 경우, 적용하겠다. */
+			.a {
+				color: white;
+				background-color: tomato;
+			}
+		}
+
+		@media (min-width: 800px) {
+		/* 최소너비가 800픽셀 이상일때 적용 */
+			.a {
+				color: white;
+				background-color: burlywood;		
+			}
+		}
+
+		@media (max-width: 600px) {
+			.desktop {
+				display: none;
+			}
+		}
+
+		@media (min-width: 800px) {
+			.mobile {
+				display: none;
+			}
+		}
+		/*  */
+		/*  */
+		/*  */
+		/*  */
+	</style>
+</head>
+<body>
+	<div class="a">안녕하세요.</div>
+	<div class="mobile">모바일</div>
+	<div class="desktop">데스크탑</div>
+</body>
+</html>

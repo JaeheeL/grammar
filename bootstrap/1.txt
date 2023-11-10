@@ -1,0 +1,31 @@
+bootstrap4 one music
+
+부트스트랩 : 반응형 웹페이지를 빠르고 안정적으로 구축하는 css/js 프레임워크
+🇰🇷 라이브러리와 프레임워크의 차이점 알기!!
+라이브러리는 코드를 가져다 쓰고, 자기마음대로 코딩을 할수있는반면, 프레임워크도 코드를 가져다 쓰지만, 정해진 룰이 있다.
+
+프레임워크 : 동일한 방식으로 코딩하는 여러가지 규칙들을 통일시키는 강요성을 가지고 있는 코딩방식의 뼈대, 약속, 유지보수성이 급격히 상승한다.
+
+class의 Column : 총 12. col-12(기본값) col-xl-*
+윈도우사이즈가 제일 최대이면 xl(col-xl-12) 그다음 lg(col-lg-*) md(col-md-*) sm(col-sm-*) xs(col-xs-*)
+
+padding과 margin
+padding, margin : style 태그에서는 ex. style="padding-top: 100px;"
+									class에서는 p-25 m-50 pb-75 mt-100 pl-xl-25 pl(padding-left)... px(padding의 x축(left+right)) py(y축(top+bottom)) p
+									ml mr mt mb mx my m
+									pl-lg-25(padding에도 중간에 lg를 붙여서 크기 조절을 할수 있다)
+
+
+width, height : style 태그에서는 ex. style="height:10px;" class에서는 w-25, h-100
+
+text-center : 텍스트 가운데정렬, 스타일로는 style="text-align:center;" 등등 left, right...도 있다.
+display : style 태그에서는 ex. style="display:block..." class에서는 d-block d-inline d-inline-block d-flex
+alert : alert alert-primary alert-secondary
+button : btn btn-primary btn-secondary
+* primary secondary	success danger warning info light dark
+
+☀︎그 외의 Components 요소들
+bootstrap 홈페이지 Docs에서 검색가능(API주소 : https://getbootstrap.com/docs/5.2/components/)
+alert, button, badge, breadcrumb, card, carousel, collapse, dropdown, list, group, modal, navs, navbar, pagination, popover,
+progress, scrollspy, spinner, toast, tooltip
+

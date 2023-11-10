@@ -1,0 +1,28 @@
+#a{
+	background-color: blueviolet;
+}
+
+.a{
+	background-color: aquamarine;
+}
+
+a {
+	background-color: black;
+}
+
+/* .son {
+	background-color: chartreuse;
+} */
+
+.father {
+	background-color: blue;
+}
+
+/* class 명시화, son이 father안에 들어있을때만 명시화 */
+.father > .son {
+	background-color: hotpink ;
+}
+
+div > span {
+	background-color: chocolate;
+}
