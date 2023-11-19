@@ -1,0 +1,53 @@
+.movieImage {
+	flex: 1;
+	width: 100px;
+	height: auto;
+	border: 1px solid grey;
+	margin-left: 8px;
+	border-radius: 10px;
+}
+
+.movieTitle {
+	display: block;
+	text-decoration: none;
+	border: 1px solid grey;
+	border-radius: 5px;
+	color: grey;
+	font-size: 30px;
+	flex: 11;
+	/* margin: 10px 0; */
+	margin: 20px 0 10px;
+}
+
+.movieTitle:hover {
+	color: white;
+	background: grey;
+}
+
+.good {
+	color: red;
+	font-weight: bold;
+}
+
+.notBad {
+	color: brown;
+	font-weight: bold;
+}
+
+.bad {
+	color: blue;
+	font-weight: bold;
+}
+
+.movieContainer {
+	margin-bottom: 20px;
+}
+
+.movieDetail {
+	display: flex;
+}
+
+.movieDescription {
+	flex: 7;
+	margin-left: 30px;
+}
