@@ -1,0 +1,8 @@
+.newsTitle {
+	text-decoration: none;
+	color: grey;
+}
+
+.newsTitle:hover {
+	color: hotpink;
+}

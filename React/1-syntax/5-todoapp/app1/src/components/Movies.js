@@ -1,31 +1,30 @@
 import React, { useState, useEffect } from 'react'
-import Loading from './Loading'
 // CSS
 import './Movies.css'
+import Loading from './Loading'
 
 // https://yts.mx/api/v2/list_movies.json?sort_by=rating
 export default function Movies() {
 	const [movies, setMovies] = useState([])
-	// 리액트는 무조건 변수를 useState로 만든다!!!
-	
+	const [isLoading, setIsLoading] = useState(false) 
 
 	useEffect(() => {
-		
+		// fetch로 값을 가져올때 시간이 오래걸리기 때문에 Loading...이라는 것을 만들어준다.
+		setIsLoading(true);
 		fetch('https://yts.mx/api/v2/list_movies.json?sort_by=rating')
-		// fetch('https://yts.mx/api/v2/list_movies.json')
-			// .then(res => console.log(res.json()))
-			// 비동기로 약속을 함. res.json값이 들어갈거다
-			.then(res => res.json())
-			.then(json => { setMovies(json.data.movies); })
-			
-
-	}, [])
+		// 화면이 안뜰때 try catch로 오류가 없이 넘어감
+			// fetch('https://yts.mx/api/v2/list_movies.json')
+				// .then(res => console.log(res.json()))
+				// 비동기로 약속을 함. res.json값이 들어갈거다
+				.then(res => res.json())
+				.then(json => { setMovies(json.data.movies);  setIsLoading(false);})
+	}, [setMovies, setIsLoading])
 
 
 
 	// return값으로써 html렌더링
 	const render = () => { 
-		console.log('movie: ', movies)
+		console.log('movies: ', movies)
 		return movies.map(item => {
 			return (
 				<div key={item.id} className="movieContainer">
@@ -59,7 +58,9 @@ export default function Movies() {
 		<>
 		{/* 검색엔진 최적화를 h1태그에서 한다 SEO(Search Engine Optimization)에 대해서 찾기 */}
 			<h1>Movie App</h1>
-			
+			{/* render를 쓰면 화면이 나오는데 그냥 render는 원래 필요없는건가? */}
+			{/* <div>{render()}</div> */}
+			<div>{ isLoading ? <Loading /> : render()}</div>
 		</>
 	)
 }

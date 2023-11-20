@@ -1,0 +1,16 @@
+.navbar {
+	/* 괄호크기를 나눠서 갖는다. */
+	display: flex;
+}
+
+.navbarItem {
+	flex: 1;
+}
+
+.menu:hover {
+	color: hotpink;
+}
+
+.menu:active {
+	color: white;
+}
