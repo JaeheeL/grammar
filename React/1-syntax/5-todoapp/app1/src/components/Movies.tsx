@@ -2,6 +2,19 @@ import React, { useState, useEffect } from 'react'
 import Loading from './Loading'
 import './Movies.css'
 
+type MoviesItemProps = {
+  id: number
+  title: string
+  rating: number
+  runtime: number
+  genres: string[]
+  summary: string
+  large_cover_image: string
+  url: string
+  year: number
+  torrents: string[]
+}
+
 export default function Movies() {
   const [movies, setMovies] = useState([])
   const [isLoading, setIsLoading] = useState(false)
@@ -15,8 +28,8 @@ export default function Movies() {
   }, [])
 
   const render = () => {
-    console.log('movies: ', movies)
-    return movies.map(item => {
+    // console.log('movies: ', movies)
+    return movies.map( (item: MoviesItemProps) => {
       return (
         <div key={item.id} className="movieContainer">
           <a className="movieTitle" href={item.url}>{item.title} ({item.year}) {item.rating >= 9 && '🔥'}</a>
@@ -29,7 +42,7 @@ export default function Movies() {
               <div>요약 : {item.summary || '정보없음'}</div>
               <div>토렌트 : {item.torrents.map((tor, idx) => { return (
                 <span>
-                  <a href={tor.url}>#{idx + 1}</a>{' '}
+                  <a href={item.url}>#{idx + 1}</a>{' '}
                 </span>
               )})}
               </div>
