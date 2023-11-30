@@ -1,46 +1,44 @@
 .movieImage {
-	flex: 1;
-	width: 100px;
+	width: 200px;
 	height: auto;
-	border: 1px solid grey;
-	margin-left: 8px;
+	border: 3px solid rgb(73, 234, 44);
+	margin-left: 10px;
 	border-radius: 10px;
+	/* flex에 대해서 더 찾아보기 */
+	flex: 1;
 }
 
 .movieTitle {
 	display: block;
 	text-decoration: none;
-	border: 1px solid grey;
+	border: 2px solid gray;
 	border-radius: 5px;
-	color: grey;
-	font-size: 30px;
-	flex: 11;
-	/* margin: 10px 0; */
-	margin: 20px 0 10px;
+	color: gray;
+	font-size: 20px;
+	flex: 10;
+	/* margin이 3개면 top 좌우 bottom */
+	margin: 10px 0 10px;
 }
 
 .movieTitle:hover {
-	color: white;
-	background: grey;
+	color: whitesmoke;
+	background-color: gray;
 }
 
-.good {
-	color: red;
-	font-weight: bold;
+.Good {
+	color: deeppink;
 }
 
 .notBad {
-	color: brown;
-	font-weight: bold;
+	color: aquamarine;
 }
 
-.bad {
-	color: blue;
-	font-weight: bold;
+.Bad {
+	color: darkviolet;
 }
 
 .movieContainer {
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 }
 
 .movieDetail {
@@ -49,5 +47,5 @@
 
 .movieDescription {
 	flex: 7;
-	margin-left: 30px;
+	margin-left: 10px;
 }

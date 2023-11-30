@@ -2,15 +2,12 @@
 
 }
 
+/* 체크를 했다 */
 .trueDone {
 	text-decoration: line-through;
 	color: red;
 }
 
 .falseDone {
-	
-}
 
-.margin  {
-	margin-top: 20px;
 }
