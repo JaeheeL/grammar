@@ -1,6 +1,15 @@
 import './News.css';
 import React, { useState, useEffect } from 'react'
 
+
+type NewsItemProps = {
+	id: number
+	url: string
+	title: string
+	time_ago: number
+	user: string
+}
+
 // 뉴스앱 API : // https://api.hnpwa.com/v0/news.json
 export default function News() {
 	const [news, setNews] = useState([]);
@@ -14,7 +23,7 @@ export default function News() {
 	}, []);
 
 	const render = () => {
-		return news.map(item => {
+		return news.map( (item: NewsItemProps ) => {
 			return (
 				<div key={item.id}>
 					<div>
