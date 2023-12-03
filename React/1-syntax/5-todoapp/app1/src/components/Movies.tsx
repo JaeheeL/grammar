@@ -17,6 +17,7 @@ type MoviesItemProps = {
 
 type TorrentsProps = {
   url: string
+  torrents: string[]
 }
 
 export default function Movies() {
@@ -46,7 +47,7 @@ export default function Movies() {
               <div>요약 : {item.summary || '정보없음'}</div>
               <div>토렌트 : {item.torrents.map((tor, idx) => { return (
                 <span>
-                  <a href={tor.url}>#{idx + 1}</a>{' '}
+                  <a href={item.url}>#{idx + 1}</a>{' '}
                 </span>
               )})}
               </div>
